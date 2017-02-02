@@ -5,16 +5,10 @@ steps:
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
-      - echo Current directory...
-      - pwd
       - echo Making directory /go/src/github.com/advance512
       - mkdir -p /go/src/github.com/advance512
       - echo Creating symbolic link...
-      - ln -s . /go/src/github.com/advance512/prest
-      - echo Going to directory /go/src/github.com/advance512/prest
-      - pwd
-      - cd / && pwd
-      - cd /go/src/github.com/advance512 && pwd
+      - cd .. && ln -s prest /go/src/github.com/advance512/prest
       - cd /go/src/github.com/advance512/prest && pwd
       - echo Directory contents...
       - cd /go/src/github.com/advance512/prest && ls -l -a
