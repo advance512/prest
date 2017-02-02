@@ -5,6 +5,8 @@ steps:
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
+      - pwd
+      - ls -l -a
       - go test
 
   build_image:
