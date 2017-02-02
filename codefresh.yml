@@ -6,8 +6,9 @@ steps:
     description: Performing unit tests...
     commands:
       - echo Symbolic link
-      - ln -s . /go/src/github.com/prest
-      - cd src/github.com/prest
+      - mkdir -p /go/src/github.com/advance512
+      - ln -s . /go/src/github.com/advance512/prest
+      - cd /go/src/github.com/advance512/prest
       - echo Local dir contents
       - pwd
       - ls -l -a
