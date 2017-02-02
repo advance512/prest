@@ -6,13 +6,10 @@ steps:
     description: Performing unit tests...
     commands:
       - echo Symbolic link
-      - ln -s . /go/prest
-      - echo Local
-      - ls -l -a
-      - echo /go contents
-      - ls -l -a /go
-      - cd /go/prest
-      - echo Local in /go/prest
+      - ln -s . /go/src/github.com/prest
+      - cd src/github.com/prest
+      - echo Local dir contents
+      - pwd
       - ls -l -a
       - go get
       - go build
