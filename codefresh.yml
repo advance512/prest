@@ -9,7 +9,7 @@ steps:
       - ln -s . /go/prest
       - echo Local
       - ls -l -a
-      - echo /go contents:
+      - echo /go contents
       - ls -l -a /go
       - cd /go/prest
       - echo Local in /go/prest
