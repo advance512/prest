@@ -4,10 +4,9 @@ steps:
     type: build
     description: Building the image...
     image_name: advance512/prest
-    tag: ${{CF_BRANCH}}
 
   perform_tests:
-    image: advance512/prest:${{CF_BRANCH}}
+    image: advance512/prest
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
