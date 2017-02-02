@@ -9,8 +9,8 @@ steps:
       - pwd
       - echo Making directory /go/src/github.com/advance512
       - mkdir -p /go/src/github.com/advance512
-      - echo Creating symbolic link...
-      - ln -s . /go/src/github.com/advance512/prest
+      - echo Creating hard link...
+      - ln . /go/src/github.com/advance512/prest
       - echo Going to directory /go/src/github.com/advance512/prest
       - cd /go/src/github.com/advance512/prest
       - pwd
