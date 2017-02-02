@@ -7,7 +7,7 @@ steps:
     tag: '${{CF_BRANCH}}'
     
   perform_tests:
-    image: advance512/prest:master
+    image: ${{build_image}}
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
