@@ -5,9 +5,8 @@ steps:
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
-      - echo Making directory /go/src/github.com/advance512
+      # Need to have the source in the correct GOPATH folder - let's do that
       - mkdir -p /go/src/github.com/advance512
-      - echo Creating symbolic link...
       - ln -s /codefresh/volume/prest /go/src/github.com/advance512/prest
       - cd /go/src/github.com/advance512/prest && go get
       - cd /go/src/github.com/advance512/prest && go test
@@ -18,3 +17,6 @@ steps:
     image_name: advance512/prest
     tag: '${{CF_BRANCH}}'
     
+  launch_composition:
+    type: launch-composition
+    composition: docker-compose.yml
