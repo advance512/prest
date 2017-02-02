@@ -1,14 +1,15 @@
 version: '1.0'
 steps:
+  perform_tests:
+    image: golang:latest
+    working_directory: ${{main_clone}}
+    description: Performing unit tests...
+    commands:
+      - go test
+
   build_image:
     type: build
     description: Building the image...
     image_name: advance512/prest
     tag: '${{CF_BRANCH}}'
     
-  perform_tests:
-    image: ${{build_image}}
-    working_directory: ${{main_clone}}
-    description: Performing unit tests...
-    commands:
-      - go test
