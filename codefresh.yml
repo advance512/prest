@@ -8,6 +8,7 @@ steps:
       - pwd
       - ls -l -a
       - echo $GOPATH
+      - env
       - go get
       - go build
       - go test
