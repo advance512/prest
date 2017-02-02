@@ -7,6 +7,8 @@ steps:
     commands:
       - pwd
       - ls -l -a
+      - go get
+      - go build
       - go test
 
   build_image:
