@@ -8,7 +8,6 @@ steps:
       - echo Making directory /go/src/github.com/advance512
       - mkdir -p /go/src/github.com/advance512
       - echo Creating symbolic link...
-      - echo ${{main_clone}}
       - cd .. && ln -s /codefresh/volume/prest /go/src/github.com/advance512/prest
       - cd /go/src/github.com/advance512/prest && pwd
       - echo Directory contents...
