@@ -13,15 +13,15 @@ steps:
       - ln -s ${{main_clone}} /go/src/github.com/advance512/prest
       - echo Going to directory /go/src/github.com/advance512/prest
       - pwd
-      - cd /
+      - cd / && pwd
       - pwd
-      - cd go
+      - cd go && pwd
       - pwd
-      - cd src
+      - cd src && pwd
       - pwd
-      - cd github.com
+      - cd github.com && pwd
       - pwd
-      - cd /go/src/github.com/advance512
+      - cd /go/src/github.com/advance512 && pwd
       - pwd
       - cd prest
       - pwd
