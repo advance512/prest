@@ -5,7 +5,7 @@ steps:
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
-      - pwd
+      - ln -s . /go/prest
       - ls -l -a
       - echo $GOPATH
       - env
