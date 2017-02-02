@@ -12,6 +12,15 @@ steps:
       - echo Creating symbolic link...
       - ln -s . /go/src/github.com/advance512/prest
       - echo Going to directory /go/src/github.com/advance512/prest
+      - pwd
+      - cd /
+      - pwd
+      - cd go
+      - pwd
+      - cd src
+      - pwd
+      - cd github.com
+      - pwd
       - cd /go/src/github.com/advance512
       - pwd
       - cd prest
