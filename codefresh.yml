@@ -2,7 +2,7 @@ version: '1.0'
 steps:
   perform_tests:
     image: golang:latest
-    working_directory: /go/src/github.com/advance512/prest
+    working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
       - echo Current directory...
@@ -10,7 +10,7 @@ steps:
       - echo Making directory /go/src/github.com/advance512
       - mkdir -p /go/src/github.com/advance512
       - echo Creating symbolic link...
-      - ln -s ${{main_clone}} /go/src/github.com/advance512/prest
+      - ln -s . /go/src/github.com/advance512/prest
       - echo Going to directory /go/src/github.com/advance512/prest
       - pwd
       - cd / && pwd
