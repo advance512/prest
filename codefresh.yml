@@ -11,4 +11,4 @@ steps:
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
-      - make tests
+      - go test
