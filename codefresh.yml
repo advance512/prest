@@ -5,10 +5,15 @@ steps:
     working_directory: ${{main_clone}}
     description: Performing unit tests...
     commands:
+      - echo Symbolic link
       - ln -s . /go/prest
+      - echo Local
       - ls -l -a
-      - echo $GOPATH
-      - env
+      - echo /go contents:
+      - ls -l -a /go
+      - cd /go/prest
+      - echo Local in /go/prest
+      - ls -l -a
       - go get
       - go build
       - go test
