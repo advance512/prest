@@ -14,22 +14,13 @@ steps:
       - echo Going to directory /go/src/github.com/advance512/prest
       - pwd
       - cd / && pwd
-      - pwd
-      - cd go && pwd
-      - pwd
-      - cd src && pwd
-      - pwd
-      - cd github.com && pwd
-      - pwd
       - cd /go/src/github.com/advance512 && pwd
-      - pwd
-      - cd prest
-      - pwd
+      - cd /go/src/github.com/advance512/prest && pwd
       - echo Directory contents...
-      - ls -l -a
-      - go get
-      - go build
-      - go test
+      - cd /go/src/github.com/advance512/prest && ls -l -a
+      - cd /go/src/github.com/advance512/prest && go get
+      - cd /go/src/github.com/advance512/prest && go build
+      - cd /go/src/github.com/advance512/prest && go test
 
   build_image:
     type: build
